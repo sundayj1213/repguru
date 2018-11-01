@@ -20,7 +20,7 @@
         background-position: center;
       }
       .cont {
-          background: linear-gradient( to left, rgba( 0, 0, 0, .9 ), rgba( 0, 0, 0, .1 ) );  
+          background: linear-gradient( to right, rgba( 0, 0, 0, .9 ), rgba( 0, 0, 0, .1 ) );  
           margin: 0;
       }
       .form { margin: 0 10%; }
@@ -32,7 +32,7 @@
         width: 60%;
         border-radius: 5px;
         border: none;
-        padding: 2% 3%;
+        padding: 2%;
       }
       .form label {
         display: block; 
@@ -42,30 +42,30 @@
   </head>
   <body>
    <div class="cont">
-     <div><h1>Website Thumbnails Proof of Concept</h1></div>
     <form action="/processor" method="get" class="form">
+      <div><h1>Website Thumbnails Proof of Concept</h1></div>
+       <label>First Name</label>
       <div class="fname">
-        <label>First Name</label>
         <input name="fname" type="text" />
       </div><!-- .fname -->
+       <label>Last Name</label>
       <div class="lname">
-        <label>Last Name</label>
         <input name="lname" type="text" />
       </div><!-- .lname --> 
+      <label>City</label>
       <div class="city">
-        <label>City</label>
         <input name="city" type="text" />
       </div><!-- .city -->  
+      <label>State</label>
       <div class="state">
-        <label>State</label>
         <input name="state" type="text" />
       </div><!-- .state --> 
+      <label>Age</label>
       <div class="age">
-        <label>Age</label>
         <input name="age" type="number"  />
-      </div><!-- .age -->        
+      </div><!-- .age -->  
+      <label>Phone number</label>
       <div class="phone">
-        <label>Phone number</label>
         <input name="phone" type="tel" />
       </div><!-- .phone --> 
       <div class="submit">
