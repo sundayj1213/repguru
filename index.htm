@@ -6,7 +6,6 @@
       @font-face{font-family:'Lato';font-style:normal;font-weight:400;src:local('Lato Regular'),local('Lato-Regular'),url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:400;src:local('Lato Regular'),local('Lato-Regular'),url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
       body {
         text-align: center;
-        font-size: 30px;
         color: #fff;
         font-family: Lato;
         background: linear-gradient( to bottom, red, orange );
@@ -16,6 +15,7 @@
       }
       .form input {
         width: 80%;
+        font-size: 30px;
         border-radius: 5px;
         padding: 2% 3%;
       }
@@ -26,22 +26,28 @@
     <h1>Website Thumbnails Proof of Concept</h1>
     <form action="/processor" method="get" class="form">
       <div class="fname">
-        <input name="fname" type="text" placeholder="First name" />
+        <label>First Name</label>
+        <input name="fname" type="text" />
       </div><!-- .fname -->
       <div class="lname">
-        <input name="lname" type="text" placeholder="Last name" />
+        <label>Last Name</label>
+        <input name="lname" type="text" />
       </div><!-- .lname --> 
       <div class="city">
-        <input name="city" type="text" placeholder="City" />
+        <label>City</label>
+        <input name="city" type="text" />
       </div><!-- .city -->  
       <div class="state">
-        <input name="state" type="text" placeholder="State" />
+        <label>State</label>
+        <input name="state" type="text" />
       </div><!-- .state --> 
       <div class="age">
-        <input name="age" type="number" placeholder="Age" />
+        <label>Age</label>
+        <input name="age" type="number"  />
       </div><!-- .age -->        
       <div class="phone">
-        <input name="phone" type="tel" placeholder="Phone number" />
+        <label>Phone number</label>
+        <input name="phone" type="tel" />
       </div><!-- .phone --> 
       <div class="submit">
         <input type="submit" value="Submit" />
