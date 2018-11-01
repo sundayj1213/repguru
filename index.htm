@@ -40,7 +40,7 @@
         $.each( form, function( index, value ) { //iterate over all form input fields
              values += '+'+value.value; //Format form values(append "+") which will be appended to request URL later on
        });
-       values = values.substr(10); //Remove first "+" sign in string
+       values = values.substr(1); //Remove first "+" sign in string
         console.log( values );
     });
   </script>
