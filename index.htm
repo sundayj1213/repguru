@@ -10,7 +10,6 @@
         padding: 0;
       }
       body {
-        text-align: center;
         color: #fff;
         font-size: 30px;
         font-family: Lato;
@@ -21,11 +20,13 @@
         background-position: center;
       }
       .cont {
-          background: linear-gradient( to left, rgba( 0, 0, 0, .5 ), rgba( 0, 0, 0, .1 ) );  
+          background: linear-gradient( to left, rgba( 0, 0, 0, .9 ), rgba( 0, 0, 0, .1 ) );  
           margin: 0;
       }
+      .form { margin: 0 10%; }
       .form > div {
-        margin: 1%;
+        text-align: center;
+        margin: 0.5%;
       }
       .form input {
         width: 60%;
@@ -41,7 +42,7 @@
   </head>
   <body>
    <div class="cont">
-    <h1>Website Thumbnails Proof of Concept</h1>
+     <div><h1>Website Thumbnails Proof of Concept</h1></div>
     <form action="/processor" method="get" class="form">
       <div class="fname">
         <label>First Name</label>
