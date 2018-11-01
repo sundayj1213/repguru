@@ -37,7 +37,7 @@
         var form = $(this).serializeArray(),
             values = '';
         $.each( form, function( index, value ) {
-             values = value;
+             values += value.value;
        });
         console.log( values );
     });
