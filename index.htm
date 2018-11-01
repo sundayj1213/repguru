@@ -34,8 +34,12 @@
   <script>
     $(document).on( 'submit', '.form', function(e) {
         e.preventDefault();
-        var form = $(this).serializeArray();
-      console.log( form );
+        var form = $(this).serializeArray(),
+            values = '';
+        $.each( form, function( index, value ) {
+             values += '+'+value;
+       });
+        console.log( values );
     });
   </script>
   </body>
