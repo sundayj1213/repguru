@@ -16,7 +16,7 @@
         background-position: center;
       }
       .cont { background: linear-gradient( to right, rgba( 0, 0, 0, .5 ), rgba( 0, 0, 0, .5 ) ); padding: 5% 0; }
-      .form { background-color: #424242; padding: 2% 4%; }
+      .form { background-color: #191970; padding: 2% 4%; }
       .form input { width: 100%; }
       .form input, .form button { border: none; padding: 2%; }
       .form label, .form button { margin-top: 2%; display: block; font-family: inherit; font-size: inherit; }
@@ -53,11 +53,17 @@
     $(document).on( 'submit', '.form', function(e) {
         e.preventDefault(); //Prevents <form> from redirecting to URL specified in it's action attibute
         var form = $(this), //Store instance of form in variable for easier reference
-            formdata = form.serializeArray(); //Gets all form fields alongside input values and stores in an object
-        $.ajax({
+            formdata = form.serializeArray(), //Gets all form fields alongside input values and stores in an object
+            values = ''; //Variable to store fields
+        $.each( formdata, function( index, data ) { //Iterate over inputted data
+            values += data.value; //Assign/format values
+        });
+        var queryURL = 'https://wwww.google.com/search/q='+values.substr(1); //Remove first "+" sign from variable & append values to google's search processor
+            console.log( queryURL );
+       $.ajax({
                 url: form.attr('action'),
                 type: form.attr('method'),
-                data: formdata,
+                data: queryURL,
                 error: function() {
                   alert( "Error: An error ocurred, please try again!" );
                 },
