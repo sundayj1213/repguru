@@ -35,13 +35,19 @@
     //Fires once form has been submitted
     $(document).on( 'submit', '.form', function(e) {
         e.preventDefault(); //Prevents <form> from redirecting to URL specified in it's action attibute
-        var form = $(this).serializeArray(), //Gets all form fields alongside input values and stores in an object
-            values = ''; //Initialize variable that will store all values supplied
-        $.each( form, function( index, value ) { //iterate over all form input fields
-             values += '+'+value.value; //Format form values(append "+") which will be appended to request URL later on
-       });
-        values = values.substr(1); //Remove first "+" sign in string
-        console.log( values );
+        var form = $(this), //Store instance of form in variable for easier reference
+            formdata = form.serializeArray(); //Gets all form fields alongside input values and stores in an object
+        $.ajax({
+                url: form.attr('action'),
+                type: form.attr('method'),
+                data: formdata,
+                error: function() {
+                  alert( "Error: An error ocurred, please try again!" );
+                },
+                success: function( data ) {
+                    console.log( data );
+                }
+          });
     });
   </script>
   </body>
