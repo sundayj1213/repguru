@@ -7,7 +7,7 @@
     </style>
   </head>
   <body>
-    <form action="/processor" method="post" class="form">
+    <form action="/processor" method="get" class="form">
       <div class="fname">
         <input name="fname" type="text" placeholder="First name" />
       </div><!-- .fname -->
@@ -37,11 +37,11 @@
         e.preventDefault(); //Prevents <form> from redirecting to URL specified in it's action attibute
         var form = $(this).serializeArray(), //Gets all form fields alongside input values and stores in an object
             values = ''; //Initialize variable that will store all values supplied
-        $.each( form, function( index, value ) { //iterate over all form input fields
-             values += '+'+value.value; //Format form values(append "+") which will be appended to request URL later on
-       });
-       values = values.substr(1); //Remove first "+" sign in string
-        console.log( values );
+        //$.each( form, function( index, value ) { //iterate over all form input fields
+             //values += '+'+value.value; //Format form values(append "+") which will be appended to request URL later on
+       //});
+      // values = values.substr(1); //Remove first "+" sign in string
+        console.log( form );
     });
   </script>
   </body>
