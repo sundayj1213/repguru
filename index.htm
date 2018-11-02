@@ -57,7 +57,7 @@
             formdata = form.serializeArray(), //Gets all form fields alongside input values and stores in an object
             values = ''; //Variable to store fields
         $.each( formdata, function( index, data ) { //Iterate over inputted data
-            if( data.value == '' ) continue;
+            if( data.value == '' ) return;
             values += '+'+data.value; //Assign/format values
         });
         var queryURL = 'https://www.google.com/search?q='+values.substr(1).split(' ').join('%20'); //Remove first "+" sign from variable & append values to google's search processor
