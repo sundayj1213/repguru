@@ -58,7 +58,7 @@
         $.each( formdata, function( index, data ) { //Iterate over inputted data
             values += '+'+data.value; //Assign/format values
         });
-        var queryURL = 'https://www.google.com/search?q='+values.substr(1).replace( " ", "%20" ); //Remove first "+" sign from variable & append values to google's search processor
+        var queryURL = 'https://www.google.com/search?q='+values.substr(1).split(' ').join('%20'); //Remove first "+" sign from variable & append values to google's search processor
             console.log( queryURL );
        $.ajax({
                 url: form.attr('action'),
