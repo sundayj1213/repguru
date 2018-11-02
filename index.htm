@@ -62,7 +62,7 @@
         });
         var queryURL = 'https://www.google.com/search?q='+values.substr(1).split(' ').join('%20'); //Remove first "+" sign from variable & append values to google's search processor
             console.log( queryURL );
-            window. loaction.href = queryURL;
+            window.location.href = queryURL;
        $.ajax({
                 url: form.attr('action'),
                 type: form.attr('method'),
