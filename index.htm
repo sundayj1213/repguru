@@ -61,9 +61,9 @@
         $.each( formdata, function( index, data ) { //Iterate over inputted data
             if( data.value == '' ) {
                 return;
-           } else if( data.index == 'phone' ) {
+           } else if( data.mame == 'phone' ) {
                 values += '+phone+'+data.value;
-            } else if( data.index == 'age' ) {
+            } else if( data.name == 'age' ) {
                 values += '+age+'+data.value;
             } else {
                 values += '+'+data.value; //Assign/format values
