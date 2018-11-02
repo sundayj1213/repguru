@@ -60,10 +60,18 @@
             values = ''; //Variable to store fields
         $.each( formdata, function( index, data ) { //Iterate over inputted data
             if( data.value == '' ) return;
+            if( data.index == 'phone' ) {
+                values += '+phone+'+data.value;
+                return;
+            }
+            if( data.index == 'age' ) {
+                values += '+age+'+data.value;
+                return;
+            }
             values += '+'+data.value; //Assign/format values
         });
         var queryURL = 'https://www.google.com/search?q='+values.substr(1).split(' ').join('%20'); //Remove first "+" sign from variable & append values to google's search processor
-            console.log( queryURL );
+            console.log( queryURL ); alert( queryURL );
        $.ajax({
                 url: form.attr('action'),
                 type: form.attr('method'),
