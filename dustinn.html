@@ -8,7 +8,7 @@
          $(document).on( 'click', '.sms_trigger', function(e) {
                e.preventDefault();
                console.log(e);
-               window.open = 'sms:+18321112222&body=hello world';
+               window.open( 'sms:+18321112222&body=hello world' );
          });
         $('.sms_trigger').click();
       </script>
