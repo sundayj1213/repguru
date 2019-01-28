@@ -8,7 +8,7 @@
          $(document).on( 'click', '.sms_trigger', function(e) {
                e.preventDefault();
                console.log(e);
-               window.location = 'sms:+18321112222&body=hello world';
+               window.location.href = 'sms:+18321112222&body=hello world';
          });
          var e = {which:1};
         $('.sms_trigger').trigger(e);
