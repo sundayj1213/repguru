@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <a class="SMS_trigger" href="SMS://+826262728&body=Hi"></a>
+        <a class="trigger" href="sms:+18321112222&body=hello world"></a>
         <h1>Hello Plunker!!!</h1>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
 
-            var link = 'sms:+18321112222&body=hello world';
-            document.location.href = link;
+           // var link = 'sms:+18321112222&body=hello world';
+           // document.location.href = link;
 
-            //$('.SMS_trigger').click();
+            $('.trigger').click();
         </script>
     </body>
 </html>
