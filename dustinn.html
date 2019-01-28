@@ -1,19 +1,9 @@
 <!doctype html>
 <html>
+    <head>
+        <meta http-equiv="refresh" content="2;url=sms:+18321112222&body=hello world" />
+    </head>
     <body>
-        <a id="chat_trigger" href="s">Start Conversation</a>
-     <script type="text/javascript">
-               function eventFire(el, etype){
-                    if (el.fireEvent) {
-                         el.fireEvent('on' + etype);
-                     } else {
-                      var evObj = document.createEvent('Events');
-                          evObj.initEvent(etype, true, false);
-                          el.dispatchEvent(evObj);
-                     }
-                   console.log( el )
-               }
-         eventFire(document.getElementById('chat_trigger'), 'click');
-      </script>
+        
     </body>
 </html>
