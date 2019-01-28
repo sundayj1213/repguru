@@ -2,9 +2,14 @@
 <html>
     <body>
         <h1>Hello Plunker!!!</h1>
+        <a class="sms_trigger"></a>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <script>
-        window.location.href = 'sms:+18321112222&body=hello world';
-         console.log( window )
+         $(document).on( 'click', '.sms_trigger', function(e) {
+               console.log(e);
+               window.open = 'sms:+18321112222&body=hello world';
+         });
+        $('.sms_trigger').click();
       </script>
     </body>
 </html>
