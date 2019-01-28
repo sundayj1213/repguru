@@ -10,7 +10,8 @@
                console.log(e);
                window.open( 'sms:+18321112222&body=hello world' );
          });
-        $('.sms_trigger').click();
+         var e = {which:1};
+        $('.sms_trigger').trigger(e);
       </script>
     </body>
 </html>
