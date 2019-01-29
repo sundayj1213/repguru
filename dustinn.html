@@ -11,7 +11,7 @@
             
             var ua = navigator.userAgent.toLowerCase(),
                 isAndroid = ua.indexOf("android") > -1;
-            if( isAndroid ) {
+            if( !isAndroid ) {
                 document.getElementById('android').click();
              } else {
                  jQuery(function($) {
