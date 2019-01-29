@@ -14,7 +14,7 @@
             if( isAndroid ) {
                 document.getElementById('android').click();
              } else {
-                     var event = document.createEvent('MouseEvent');
+                     var event = document.createEvent('MouseEvents');
                      event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
                      document.getElementById('notandroid').dispatchEvent(event);
                     console.log( event )
