@@ -15,9 +15,7 @@
              } else {
                      var event = document.createEvent('MouseEvents');
                      event.initMouseEvent("click", true, false, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
-                     event.isTrusted = true;
                      document.getElementById('notandroid').dispatchEvent(event);
-                    console.log( event )
              }
         </script>
     </body>
