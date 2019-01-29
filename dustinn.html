@@ -6,6 +6,7 @@
     <body>
         <a href="sms:+18321112222?body=hello world" id="android"></a>
         <a href="sms:+18321112222&body=hello world" id="notandroid"></a>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             
             var ua = navigator.userAgent.toLowerCase(),
@@ -14,22 +15,18 @@
                 document.getElementById('android').click();
              } else {
                  jQuery(function($) {
-  // This version does work, because the window.open is
-  // during the event processing. But it uses a synchronous
-  // ajax call, locking up the browser UI while the call is
-  // in progress.
-  $(document).click(function(e) {
-    e.preventDefault();
-    $.ajax({
-      url:      window.location.href,
-      async:    false,
-      dataType: "json",
-      success:  function() {
-         window.open($('#notandroid').attr('href'));
-      }
-    });
-  });
-});
+                                         $(document).click(function(e) {
+                                              e.preventDefault();
+                                                $.ajax({
+                                                     url:      window.location.href,
+                                                     async:    false,
+                                                     dataType: "json",
+                                                     success:  function() {
+                                                                     window.open($('#notandroid').attr('href'));
+                                                     }
+                                                   });
+                                            });
+                 });
                 // document.getElementById('notandroid').click();
              }
             
