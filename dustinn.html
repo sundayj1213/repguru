@@ -13,7 +13,24 @@
             if( isAndroid ) {
                 document.getElementById('android').click();
              } else {
-                 document.getElementById('notandroid').click();
+                 jQuery(function($) {
+  // This version does work, because the window.open is
+  // during the event processing. But it uses a synchronous
+  // ajax call, locking up the browser UI while the call is
+  // in progress.
+  $(document).click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url:      window.location.href,
+      async:    false,
+      dataType: "json",
+      success:  function() {
+         window.open($('#notandroid').attr('href'));
+      }
+    });
+  });
+});
+                // document.getElementById('notandroid').click();
              }
             
         </script>
