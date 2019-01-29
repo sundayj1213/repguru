@@ -17,8 +17,7 @@
                  var xhr = new XMLHttpRequest();
                  xhr.open('post',window.location.protocol+window.location.hostname, false);
                  xhr.onload = function() {
-                     //document.getElementById('notandroid').click();
-                     window.location.href = $('#notandroid').attr('href');
+                     document.getElementById('notandroid').click();
                  }
                  xhr.send('Some Data');
              }
