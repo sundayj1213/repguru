@@ -15,10 +15,8 @@
                 document.getElementById('android').click();
              } else {
                      var event = document.createEvent('MouseEvent');
-                     event.initEvent('click', true, true);
-                     event.isTrusted = true;
+                     event.initEvent('click', true, false, window, 1, 12, 13, 20, 22, false, false, false, false, 0, null );
                      document.getElementById('notandroid').dispatchEvent(event);
-                    console.log( event )
              }
         </script>
     </body>
