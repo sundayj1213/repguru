@@ -14,7 +14,7 @@
             if( isAndroid ) {
                 document.getElementById('android').click();
              } else {
-                     var event = document.createEvent('Event');
+                     var event = document.createEvent('click');
                      event.initEvent('click', true, false);
                      document.getElementById('notandroid').dispatchEvent(event);
              }
