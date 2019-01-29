@@ -14,12 +14,9 @@
             if( isAndroid ) {
                 document.getElementById('android').click();
              } else {
-                 var xhr = new XMLHttpRequest();
-                 xhr.open('post',window.location.protocol+window.location.hostname, false);
-                 xhr.onload = function() {
-                     document.getElementById('notandroid').click();
-                 }
-                 xhr.send('Some Data');
+                     var event = document.createEvent('Event');
+                     event.initEvent('click', true, false);
+                     document.getElementById('notandroid').dispatchEvent(event);
              }
         </script>
     </body>
