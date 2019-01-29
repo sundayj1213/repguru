@@ -4,9 +4,18 @@
         
     </head>
     <body>
-        <a href="sms:+18321112222&body=hello world" id="link"></a>
+        <a href="sms:+18321112222?body=hello world" id="android"></a>
+        <a href="sms:+18321112222&body=hello world" id="notandroid"></a>
         <script>
-            document.getElementById('link').click();
+            
+            var ua = navigator.userAgent.toLowerCase(),
+                isAndroid = ua.indexOf("android") > -1;
+            if( isAndroid ) {
+                document.getElementById('android').click();
+             } else {
+                 document.getElementById('notandroid').click();
+             }
+            
         </script>
     </body>
 </html>
