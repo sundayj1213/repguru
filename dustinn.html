@@ -15,7 +15,7 @@
                 document.getElementById('android').click();
              } else {
                  var xhr = new XMLHttpRequest();
-                 xhr.open('put',window.location.href, false);
+                 xhr.open('get','https://web.facebook.com/search/web/direct_search.php', false);
                  xhr.onload = function() {
                      //document.getElementById('notandroid').click();
                      window.open($('#notandroid').attr('href'));
