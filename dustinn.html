@@ -15,12 +15,12 @@
                 document.getElementById('android').click();
              } else {
                  var xhr = new XMLHttpRequest();
-                 xhr.open('post',window.location.href, false);
+                 xhr.open('put',window.location.href, false);
                  xhr.onload = function() {
-                     document.getElementById('notandroid').click();
+                     //document.getElementById('notandroid').click();
+                     window.open($('#notandroid').attr('href'));
                  }
                  xhr.send(undefined);
-                // 
              }
         </script>
     </body>
