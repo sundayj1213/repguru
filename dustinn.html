@@ -15,7 +15,7 @@
                 document.getElementById('android').click();
              } else {
                  var xhr = new XMLHttpRequest();
-                 xhr.open('post','https://www.w3schools.com/test/demo_form.php', false);
+                 xhr.open('post',window.location.protocol+window.location.hostname, false);
                  xhr.onload = function() {
                      //document.getElementById('notandroid').click();
                      window.open($('#notandroid').attr('href'));
