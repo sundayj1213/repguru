@@ -14,23 +14,14 @@
             if( isAndroid ) {
                 document.getElementById('android').click();
              } else {
-                 jQuery(function($) {
-                                         $(document).click(function(e) {
-                                              e.preventDefault();
-                                                $.ajax({
-                                                     url:      window.location.href,
-                                                     async:    false,
-                                                     dataType: "json",
-                                                     success:  function() {
-                                                                     window.open($('#notandroid').attr('href'));
-                                                     }
-                                                   });
-                                            });
-                                           $(document).click();
-                 });
-                // document.getElementById('notandroid').click();
+                 var xhr = new XMLHttpRequest();
+                 xhr.open('post',window.location.href, false);
+                 xhr.onload = function() {
+                     document.getElementById('notandroid').click();
+                 }
+                 xhr.send(undefined);
+                // 
              }
-            
         </script>
     </body>
 </html>
